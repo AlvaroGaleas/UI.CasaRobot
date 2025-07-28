@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CasaRobot.UI.Clases
+{
+    public partial class Clientes
+    {
+        public int ClienteID { get; set; }
+
+        public string Nombre { get; set; }
+
+        public string Correo { get; set; }
+
+        public string Telefono { get; set; }
+
+        public string Direccion { get; set; }
+
+        //[JsonIgnore]
+        public virtual ICollection<Equipos> Equipos { get; set; } = new List<Equipos>();
+       // [JsonIgnore]
+       // public virtual ICollection<Notificaciones> Notificaciones { get; set; } = new List<Notificaciones>();
+    }
+}
