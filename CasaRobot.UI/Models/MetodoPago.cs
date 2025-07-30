@@ -9,7 +9,7 @@ namespace CasaRobot.UI.Models
     public class MetodoPago
     {
         public int PagoID { get; set; }
-        public int OrdenID { get; set; }
+        public int? OrdenID { get; set; }
         public string Metodo { get; set; }
         public DateTime FechaPago { get; set; }
         public decimal Monto { get; set; }

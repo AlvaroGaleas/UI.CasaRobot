@@ -18,7 +18,7 @@ namespace CasaRobot.UI.Services
 
         public Task<List<HistorialServicio>> ObtenerHistorialAsync()
         {
-            return _apiService.GetAsync<HistorialServicio>("api/HistorialServiciosControlador/ListarHistorial");
+            return _apiService.GetAsync<HistorialServicio>("api/HistorialServiciosControlador/ListarHistorialesTodos");
         }
 
         public Task<bool> CrearHistorialAsync(HistorialServicio historial)

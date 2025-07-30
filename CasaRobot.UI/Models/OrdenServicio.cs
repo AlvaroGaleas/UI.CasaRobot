@@ -9,8 +9,8 @@ namespace CasaRobot.UI.Models
     public class OrdenServicio
     {
         public int OrdenID { get; set; }
-        public int EquipoID { get; set; }
-        public int EstadoID { get; set; }
+        public int? EquipoID { get; set; }
+        public int? EstadoID { get; set; }
         public string DescripcionProblema { get; set; }
         public DateTime FechaIngreso { get; set; }
         public DateTime? FechaSalida { get; set; }

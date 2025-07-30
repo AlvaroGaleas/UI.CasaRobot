@@ -18,22 +18,22 @@ namespace CasaRobot.UI.Services
 
         public Task<List<MetodoPago>> ObtenerPagosAsync()
         {
-            return _apiService.GetAsync<MetodoPago>("api/MetodosPagoControlador/ListarPagos");
+            return _apiService.GetAsync<MetodoPago>("api/MetodosPagoControlador/ListarMetodos");
         }
 
         public Task<bool> CrearPagoAsync(MetodoPago pago)
         {
-            return _apiService.PostAsync("api/MetodosPagoControlador/CrearPago", pago);
+            return _apiService.PostAsync("api/MetodosPagoControlador/CrearMetodoPago", pago);
         }
 
         public Task<bool> ActualizarPagoAsync(MetodoPago pago)
         {
-            return _apiService.PutAsync($"api/MetodosPagoControlador/ActualizarPago/{pago.PagoID}", pago);
+            return _apiService.PutAsync($"api/MetodosPagoControlador/ActualizarMetodo/{pago.PagoID}", pago);
         }
 
         public Task<bool> EliminarPagoAsync(int pagoId)
         {
-            return _apiService.DeleteAsync($"api/MetodosPagoControlador/EliminarPago/{pagoId}");
+            return _apiService.DeleteAsync($"api/MetodosPagoControlador/EliminarMetodoPago/{pagoId}");
         }
     }
 }

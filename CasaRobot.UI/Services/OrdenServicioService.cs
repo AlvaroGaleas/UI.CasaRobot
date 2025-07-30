@@ -28,7 +28,7 @@ namespace CasaRobot.UI.Services
 
         public Task<bool> ActualizarOrdenAsync(OrdenServicio orden)
         {
-            return _apiService.PutAsync($"api/OrdenesServicioControlador/ActualizarOrden/{orden.OrdenID}", orden);
+            return _apiService.PutAsync($"api/OrdenesServicioControlador/ActualizarOrdenes/{orden.OrdenID}", orden);
         }
 
         public Task<bool> EliminarOrdenAsync(int ordenId)
