@@ -1,5 +1,4 @@
 ﻿using CasaRobot.UI.Clases;
-using CasaRobot.UI.Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,23 +16,22 @@ namespace CasaRobot.UI
     public partial class FrmIngresarEquipos : Form
     {
         private readonly HttpClient _httpEquipos;
-        private const string BaseUrlEquipos = "https://localhost:7233/api/EquiposControlador/";
+        private const string BaseUrlEquipos = "http://localhost:7233/EquiposControlador/";
 
         public FrmIngresarEquipos()
         {
             InitializeComponent();
             _httpEquipos = new HttpClient();
-            CargarClientes();            
-            LoadEquiposAsync();
+            CargarClientes();
+
         }
         private async Task LoadEquiposAsync()
         {
             try
             {
-                var response = await _httpEquipos.GetStringAsync(BaseUrlEquipos + "GetEquipos");
+                var response = await _httpEquipos.GetStringAsync(BaseUrlEquipos + "ListarEstadosTodos");
                 var equipos = JsonSerializer.Deserialize<List<Equipos>>(response);
                 dgvDatos.DataSource = equipos;
-                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
@@ -56,14 +54,13 @@ namespace CasaRobot.UI
             {
                 using (HttpClient client = new HttpClient())
                 {
-                var response = await client.GetAsync("https://localhost:7233/api/ClientesControlador/" + "GetClientes");
+                var response = await client.GetAsync("http://localhost:7233/ClientesControlador/" + "GetClientes");
                 if (response.IsSuccessStatusCode)
                  {
                     var clientes = await response.Content.ReadAsAsync<List<Clientes>>();
                     cmbClientes.DataSource = clientes;
                     cmbClientes.DisplayMember = "Nombre";
                     cmbClientes.ValueMember = "ClienteID";
-                        
                  }
                 }
             }
@@ -71,10 +68,10 @@ namespace CasaRobot.UI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
+
 
         }
-        
+
         private void panelIniciar_Paint(object sender, PaintEventArgs e)
         {
 
@@ -86,21 +83,20 @@ namespace CasaRobot.UI
             {
                 Marca = txtMarca.Text,
                 Modelo = txtModelo.Text,
-                NumeroSerie = txtNumeroS.Text,
+                NumeroSerie = txtNumeroSerie.Text,
                 ClienteID = (int?)cmbClientes.SelectedValue
                 
             };
 
             using (HttpClient client = new HttpClient())
             {
-                var response = await client.PostAsJsonAsync("https://localhost:7233/api/EquiposControlador/CrearEquipo", equipo);
+                var response = await client.PostAsJsonAsync("http://localhost:7233/EquiposControlador/", equipo);
                 if (response.IsSuccessStatusCode)
                 {
                     MessageBox.Show("Equipo guardado");
                     LoadEquiposAsync();
                 }
             }
-
 
         }
     }

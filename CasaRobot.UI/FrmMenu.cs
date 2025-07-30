@@ -1,3 +1,4 @@
+using CasaRobot.UI.Forms;
 using FontAwesome.Sharp;
 namespace CasaRobot.UI
 {
@@ -83,23 +84,20 @@ namespace CasaRobot.UI
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            activatebutton(sender, RGBColors.color1);
-            OpenChildForm(new FrmIniciarSesion());
+
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
 
-            activatebutton(sender, RGBColors.color2);
-            OpenChildForm(new FrmCrearUsuario());
+
         }
 
 
 
         private void btnBuscarEquipos_Click(object sender, EventArgs e)
         {
-            activatebutton(sender, RGBColors.color6);
-            OpenChildForm(new FrmBuscarEquipos());
+
         }
 
         private void btnLogo_Click(object sender, EventArgs e)
@@ -158,13 +156,61 @@ namespace CasaRobot.UI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            activatebutton(sender, RGBColors.color6);
-            OpenChildForm(new FrmIngresarEquipos());
-        }
 
+        }
+        //ctivatebutton(sender, RGBColors.color6);
+        //OpenChildForm(new FrmIngresarEquipos());
         private void FrmMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btMClientes_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new ClientesForm());
+        }
+
+        private void btMEquipos_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new EquiposForm());
+        }
+
+        private void btMOrdenServicio_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new OrdenesServicioForm());
+        }
+
+        private void btMEmpleados_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new EmpleadosForm());
+        }
+
+        private void btMEstados_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new EstadosForm());
+        }
+
+        private void btMCostos_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new CostosForm());
+        }
+
+        private void btMHistorial_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new HistorialForm());
+        }
+
+        private void btMMetodoPago_Click(object sender, EventArgs e)
+        {
+            activatebutton(sender, RGBColors.color6);
+            OpenChildForm(new MetodosPagoForm());
         }
     }
 }

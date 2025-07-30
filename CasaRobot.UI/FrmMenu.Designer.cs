@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             panelMenu = new Panel();
-            btnBuscarEquipos = new FontAwesome.Sharp.IconButton();
-            btnIngresar = new FontAwesome.Sharp.IconButton();
-            btnCrearUsuario = new FontAwesome.Sharp.IconButton();
-            btnIniciarSesion = new FontAwesome.Sharp.IconButton();
+            btMMetodoPago = new FontAwesome.Sharp.IconButton();
+            btMHistorial = new FontAwesome.Sharp.IconButton();
+            btMCostos = new FontAwesome.Sharp.IconButton();
+            btMEstados = new FontAwesome.Sharp.IconButton();
+            btMEmpleados = new FontAwesome.Sharp.IconButton();
+            btMOrdenServicio = new FontAwesome.Sharp.IconButton();
+            btMEquipos = new FontAwesome.Sharp.IconButton();
+            btMClientes = new FontAwesome.Sharp.IconButton();
             panelLogo = new Panel();
             btnLogo = new PictureBox();
             panelBarra = new Panel();
@@ -59,10 +63,14 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.CornflowerBlue;
-            panelMenu.Controls.Add(btnBuscarEquipos);
-            panelMenu.Controls.Add(btnIngresar);
-            panelMenu.Controls.Add(btnCrearUsuario);
-            panelMenu.Controls.Add(btnIniciarSesion);
+            panelMenu.Controls.Add(btMMetodoPago);
+            panelMenu.Controls.Add(btMHistorial);
+            panelMenu.Controls.Add(btMCostos);
+            panelMenu.Controls.Add(btMEstados);
+            panelMenu.Controls.Add(btMEmpleados);
+            panelMenu.Controls.Add(btMOrdenServicio);
+            panelMenu.Controls.Add(btMEquipos);
+            panelMenu.Controls.Add(btMClientes);
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
@@ -71,97 +79,189 @@
             panelMenu.Size = new Size(251, 844);
             panelMenu.TabIndex = 0;
             // 
-            // btnBuscarEquipos
+            // btMMetodoPago
             // 
-            btnBuscarEquipos.Dock = DockStyle.Top;
-            btnBuscarEquipos.FlatAppearance.BorderSize = 0;
-            btnBuscarEquipos.FlatStyle = FlatStyle.Flat;
-            btnBuscarEquipos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBuscarEquipos.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btnBuscarEquipos.IconColor = Color.MidnightBlue;
-            btnBuscarEquipos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscarEquipos.IconSize = 40;
-            btnBuscarEquipos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscarEquipos.Location = new Point(0, 426);
-            btnBuscarEquipos.Margin = new Padding(3, 4, 3, 4);
-            btnBuscarEquipos.Name = "btnBuscarEquipos";
-            btnBuscarEquipos.Padding = new Padding(11, 0, 0, 0);
-            btnBuscarEquipos.Size = new Size(251, 80);
-            btnBuscarEquipos.TabIndex = 4;
-            btnBuscarEquipos.Text = "Buscar Equipos";
-            btnBuscarEquipos.TextAlign = ContentAlignment.MiddleLeft;
-            btnBuscarEquipos.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscarEquipos.UseVisualStyleBackColor = true;
-            btnBuscarEquipos.Click += btnBuscarEquipos_Click;
+            btMMetodoPago.Dock = DockStyle.Top;
+            btMMetodoPago.FlatAppearance.BorderSize = 0;
+            btMMetodoPago.FlatStyle = FlatStyle.Flat;
+            btMMetodoPago.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMMetodoPago.IconChar = FontAwesome.Sharp.IconChar.Pager;
+            btMMetodoPago.IconColor = Color.MidnightBlue;
+            btMMetodoPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMMetodoPago.IconSize = 40;
+            btMMetodoPago.ImageAlign = ContentAlignment.MiddleLeft;
+            btMMetodoPago.Location = new Point(0, 487);
+            btMMetodoPago.Margin = new Padding(3, 4, 3, 4);
+            btMMetodoPago.Name = "btMMetodoPago";
+            btMMetodoPago.Padding = new Padding(11, 0, 0, 0);
+            btMMetodoPago.Size = new Size(251, 43);
+            btMMetodoPago.TabIndex = 12;
+            btMMetodoPago.Text = "Métodos de Pago";
+            btMMetodoPago.TextAlign = ContentAlignment.MiddleLeft;
+            btMMetodoPago.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMMetodoPago.UseVisualStyleBackColor = true;
+            btMMetodoPago.Click += btMMetodoPago_Click;
             // 
-            // btnIngresar
+            // btMHistorial
             // 
-            btnIngresar.Dock = DockStyle.Top;
-            btnIngresar.FlatAppearance.BorderSize = 0;
-            btnIngresar.FlatStyle = FlatStyle.Flat;
-            btnIngresar.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIngresar.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;
-            btnIngresar.IconColor = Color.MidnightBlue;
-            btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnIngresar.IconSize = 40;
-            btnIngresar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIngresar.Location = new Point(0, 346);
-            btnIngresar.Margin = new Padding(3, 4, 3, 4);
-            btnIngresar.Name = "btnIngresar";
-            btnIngresar.Padding = new Padding(11, 0, 0, 0);
-            btnIngresar.Size = new Size(251, 80);
-            btnIngresar.TabIndex = 3;
-            btnIngresar.Text = "Ingresar Equipos";
-            btnIngresar.TextAlign = ContentAlignment.MiddleLeft;
-            btnIngresar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnIngresar.UseVisualStyleBackColor = true;
-            btnIngresar.Click += btnIngresar_Click;
+            btMHistorial.Dock = DockStyle.Top;
+            btMHistorial.FlatAppearance.BorderSize = 0;
+            btMHistorial.FlatStyle = FlatStyle.Flat;
+            btMHistorial.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMHistorial.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
+            btMHistorial.IconColor = Color.MidnightBlue;
+            btMHistorial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMHistorial.IconSize = 40;
+            btMHistorial.ImageAlign = ContentAlignment.MiddleLeft;
+            btMHistorial.Location = new Point(0, 444);
+            btMHistorial.Margin = new Padding(3, 4, 3, 4);
+            btMHistorial.Name = "btMHistorial";
+            btMHistorial.Padding = new Padding(11, 0, 0, 0);
+            btMHistorial.Size = new Size(251, 43);
+            btMHistorial.TabIndex = 11;
+            btMHistorial.Text = "Historial";
+            btMHistorial.TextAlign = ContentAlignment.MiddleLeft;
+            btMHistorial.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMHistorial.UseVisualStyleBackColor = true;
+            btMHistorial.Click += btMHistorial_Click;
             // 
-            // btnCrearUsuario
+            // btMCostos
             // 
-            btnCrearUsuario.Dock = DockStyle.Top;
-            btnCrearUsuario.FlatAppearance.BorderSize = 0;
-            btnCrearUsuario.FlatStyle = FlatStyle.Flat;
-            btnCrearUsuario.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCrearUsuario.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            btnCrearUsuario.IconColor = Color.MidnightBlue;
-            btnCrearUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCrearUsuario.IconSize = 40;
-            btnCrearUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCrearUsuario.Location = new Point(0, 266);
-            btnCrearUsuario.Margin = new Padding(3, 4, 3, 4);
-            btnCrearUsuario.Name = "btnCrearUsuario";
-            btnCrearUsuario.Padding = new Padding(11, 0, 0, 0);
-            btnCrearUsuario.Size = new Size(251, 80);
-            btnCrearUsuario.TabIndex = 2;
-            btnCrearUsuario.Text = "Crear Usuario";
-            btnCrearUsuario.TextAlign = ContentAlignment.MiddleLeft;
-            btnCrearUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnCrearUsuario.UseVisualStyleBackColor = true;
-            btnCrearUsuario.Click += btnCrearUsuario_Click;
+            btMCostos.Dock = DockStyle.Top;
+            btMCostos.FlatAppearance.BorderSize = 0;
+            btMCostos.FlatStyle = FlatStyle.Flat;
+            btMCostos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMCostos.IconChar = FontAwesome.Sharp.IconChar.DollyBox;
+            btMCostos.IconColor = Color.MidnightBlue;
+            btMCostos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMCostos.IconSize = 40;
+            btMCostos.ImageAlign = ContentAlignment.MiddleLeft;
+            btMCostos.Location = new Point(0, 401);
+            btMCostos.Margin = new Padding(3, 4, 3, 4);
+            btMCostos.Name = "btMCostos";
+            btMCostos.Padding = new Padding(11, 0, 0, 0);
+            btMCostos.Size = new Size(251, 43);
+            btMCostos.TabIndex = 10;
+            btMCostos.Text = "Costos";
+            btMCostos.TextAlign = ContentAlignment.MiddleLeft;
+            btMCostos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMCostos.UseVisualStyleBackColor = true;
+            btMCostos.Click += btMCostos_Click;
             // 
-            // btnIniciarSesion
+            // btMEstados
             // 
-            btnIniciarSesion.Dock = DockStyle.Top;
-            btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            btnIniciarSesion.FlatStyle = FlatStyle.Flat;
-            btnIniciarSesion.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIniciarSesion.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            btnIniciarSesion.IconColor = Color.MidnightBlue;
-            btnIniciarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnIniciarSesion.IconSize = 40;
-            btnIniciarSesion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIniciarSesion.Location = new Point(0, 186);
-            btnIniciarSesion.Margin = new Padding(3, 4, 3, 4);
-            btnIniciarSesion.Name = "btnIniciarSesion";
-            btnIniciarSesion.Padding = new Padding(11, 0, 0, 0);
-            btnIniciarSesion.Size = new Size(251, 80);
-            btnIniciarSesion.TabIndex = 1;
-            btnIniciarSesion.Text = "Iniciar Sesion";
-            btnIniciarSesion.TextAlign = ContentAlignment.MiddleLeft;
-            btnIniciarSesion.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnIniciarSesion.UseVisualStyleBackColor = true;
-            btnIniciarSesion.Click += btnIniciarSesion_Click;
+            btMEstados.Dock = DockStyle.Top;
+            btMEstados.FlatAppearance.BorderSize = 0;
+            btMEstados.FlatStyle = FlatStyle.Flat;
+            btMEstados.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMEstados.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            btMEstados.IconColor = Color.MidnightBlue;
+            btMEstados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMEstados.IconSize = 40;
+            btMEstados.ImageAlign = ContentAlignment.MiddleLeft;
+            btMEstados.Location = new Point(0, 358);
+            btMEstados.Margin = new Padding(3, 4, 3, 4);
+            btMEstados.Name = "btMEstados";
+            btMEstados.Padding = new Padding(11, 0, 0, 0);
+            btMEstados.Size = new Size(251, 43);
+            btMEstados.TabIndex = 9;
+            btMEstados.Text = "Estados";
+            btMEstados.TextAlign = ContentAlignment.MiddleLeft;
+            btMEstados.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMEstados.UseVisualStyleBackColor = true;
+            btMEstados.Click += btMEstados_Click;
+            // 
+            // btMEmpleados
+            // 
+            btMEmpleados.Dock = DockStyle.Top;
+            btMEmpleados.FlatAppearance.BorderSize = 0;
+            btMEmpleados.FlatStyle = FlatStyle.Flat;
+            btMEmpleados.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMEmpleados.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btMEmpleados.IconColor = Color.MidnightBlue;
+            btMEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMEmpleados.IconSize = 40;
+            btMEmpleados.ImageAlign = ContentAlignment.MiddleLeft;
+            btMEmpleados.Location = new Point(0, 315);
+            btMEmpleados.Margin = new Padding(3, 4, 3, 4);
+            btMEmpleados.Name = "btMEmpleados";
+            btMEmpleados.Padding = new Padding(11, 0, 0, 0);
+            btMEmpleados.Size = new Size(251, 43);
+            btMEmpleados.TabIndex = 8;
+            btMEmpleados.Text = "Empleados";
+            btMEmpleados.TextAlign = ContentAlignment.MiddleLeft;
+            btMEmpleados.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMEmpleados.UseVisualStyleBackColor = true;
+            btMEmpleados.Click += btMEmpleados_Click;
+            // 
+            // btMOrdenServicio
+            // 
+            btMOrdenServicio.Dock = DockStyle.Top;
+            btMOrdenServicio.FlatAppearance.BorderSize = 0;
+            btMOrdenServicio.FlatStyle = FlatStyle.Flat;
+            btMOrdenServicio.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMOrdenServicio.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            btMOrdenServicio.IconColor = Color.MidnightBlue;
+            btMOrdenServicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMOrdenServicio.IconSize = 40;
+            btMOrdenServicio.ImageAlign = ContentAlignment.MiddleLeft;
+            btMOrdenServicio.Location = new Point(0, 272);
+            btMOrdenServicio.Margin = new Padding(3, 4, 3, 4);
+            btMOrdenServicio.Name = "btMOrdenServicio";
+            btMOrdenServicio.Padding = new Padding(11, 0, 0, 0);
+            btMOrdenServicio.Size = new Size(251, 43);
+            btMOrdenServicio.TabIndex = 7;
+            btMOrdenServicio.Text = "Órdenes de Servicio";
+            btMOrdenServicio.TextAlign = ContentAlignment.MiddleLeft;
+            btMOrdenServicio.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMOrdenServicio.UseVisualStyleBackColor = true;
+            btMOrdenServicio.Click += btMOrdenServicio_Click;
+            // 
+            // btMEquipos
+            // 
+            btMEquipos.Dock = DockStyle.Top;
+            btMEquipos.FlatAppearance.BorderSize = 0;
+            btMEquipos.FlatStyle = FlatStyle.Flat;
+            btMEquipos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMEquipos.IconChar = FontAwesome.Sharp.IconChar.Computer;
+            btMEquipos.IconColor = Color.MidnightBlue;
+            btMEquipos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMEquipos.IconSize = 40;
+            btMEquipos.ImageAlign = ContentAlignment.MiddleLeft;
+            btMEquipos.Location = new Point(0, 229);
+            btMEquipos.Margin = new Padding(3, 4, 3, 4);
+            btMEquipos.Name = "btMEquipos";
+            btMEquipos.Padding = new Padding(11, 0, 0, 0);
+            btMEquipos.Size = new Size(251, 43);
+            btMEquipos.TabIndex = 6;
+            btMEquipos.Text = "Equipos";
+            btMEquipos.TextAlign = ContentAlignment.MiddleLeft;
+            btMEquipos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMEquipos.UseVisualStyleBackColor = true;
+            btMEquipos.Click += btMEquipos_Click;
+            // 
+            // btMClientes
+            // 
+            btMClientes.Dock = DockStyle.Top;
+            btMClientes.FlatAppearance.BorderSize = 0;
+            btMClientes.FlatStyle = FlatStyle.Flat;
+            btMClientes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btMClientes.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            btMClientes.IconColor = Color.MidnightBlue;
+            btMClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btMClientes.IconSize = 40;
+            btMClientes.ImageAlign = ContentAlignment.MiddleLeft;
+            btMClientes.Location = new Point(0, 186);
+            btMClientes.Margin = new Padding(3, 4, 3, 4);
+            btMClientes.Name = "btMClientes";
+            btMClientes.Padding = new Padding(11, 0, 0, 0);
+            btMClientes.Size = new Size(251, 43);
+            btMClientes.TabIndex = 5;
+            btMClientes.Text = "Clientes";
+            btMClientes.TextAlign = ContentAlignment.MiddleLeft;
+            btMClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btMClientes.UseVisualStyleBackColor = true;
+            btMClientes.Click += btMClientes_Click;
             // 
             // panelLogo
             // 
@@ -257,7 +357,7 @@
             // 
             lblTitleChildForm.AutoSize = true;
             lblTitleChildForm.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitleChildForm.Location = new Point(95, 30);
+            lblTitleChildForm.Location = new Point(94, 30);
             lblTitleChildForm.Name = "lblTitleChildForm";
             lblTitleChildForm.Size = new Size(48, 20);
             lblTitleChildForm.TabIndex = 1;
@@ -270,11 +370,11 @@
             IconoCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
             IconoCurrentChildForm.IconColor = Color.MidnightBlue;
             IconoCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            IconoCurrentChildForm.IconSize = 37;
-            IconoCurrentChildForm.Location = new Point(51, 30);
+            IconoCurrentChildForm.IconSize = 68;
+            IconoCurrentChildForm.Location = new Point(20, 4);
             IconoCurrentChildForm.Margin = new Padding(3, 4, 3, 4);
             IconoCurrentChildForm.Name = "IconoCurrentChildForm";
-            IconoCurrentChildForm.Size = new Size(37, 42);
+            IconoCurrentChildForm.Size = new Size(68, 68);
             IconoCurrentChildForm.TabIndex = 0;
             IconoCurrentChildForm.TabStop = false;
             // 
@@ -343,11 +443,7 @@
         #endregion
 
         private Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnIniciarSesion;
         private Panel panel1;
-        private FontAwesome.Sharp.IconButton btnBuscarEquipos;
-        private FontAwesome.Sharp.IconButton btnIngresar;
-        private FontAwesome.Sharp.IconButton btnCrearUsuario;
         private Panel panelBarra;
         private FontAwesome.Sharp.IconPictureBox IconoCurrentChildForm;
         private Label lblTitleChildForm;
@@ -359,5 +455,13 @@
         private FontAwesome.Sharp.IconPictureBox iconCerrar;
         private FontAwesome.Sharp.IconPictureBox iconMaximizar;
         private Label label1;
+        private FontAwesome.Sharp.IconButton btMClientes;
+        private FontAwesome.Sharp.IconButton btMMetodoPago;
+        private FontAwesome.Sharp.IconButton btMHistorial;
+        private FontAwesome.Sharp.IconButton btMCostos;
+        private FontAwesome.Sharp.IconButton btMEstados;
+        private FontAwesome.Sharp.IconButton btMEmpleados;
+        private FontAwesome.Sharp.IconButton btMOrdenServicio;
+        private FontAwesome.Sharp.IconButton btMEquipos;
     }
 }

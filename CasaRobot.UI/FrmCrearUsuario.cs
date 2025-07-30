@@ -41,7 +41,7 @@ namespace CasaRobot.UI
 
             using (HttpClient client = new HttpClient())
             {
-                var response = await client.PostAsJsonAsync("https://localhost:7233/api/ClientesControlador/CrearCliente/", cliente);
+                var response = await client.PostAsJsonAsync("http://localhost:7233/ClientesControlador/CrearCliente/", cliente);
                 if (response.IsSuccessStatusCode)
                 {
                     MessageBox.Show("Cliente guardado exitosamente");

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIniciarSesion));
             panel2 = new Panel();
             button1 = new Button();
             textBox1 = new TextBox();
@@ -43,10 +44,12 @@
             txtContraseña = new TextBox();
             textIngresarUsuario = new TextBox();
             btnIngresar = new Button();
+            btnLogo = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconUsuario).BeginInit();
             panelIniciar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnLogo).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -61,8 +64,8 @@
             panel2.Controls.Add(iconUsuario);
             panel2.Enabled = false;
             panel2.ForeColor = Color.CornflowerBlue;
-            panel2.Location = new Point(407, 202);
-            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Location = new Point(-9, -91);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(0, 0);
             panel2.TabIndex = 1;
@@ -72,10 +75,10 @@
             button1.BackColor = Color.MidnightBlue;
             button1.Enabled = false;
             button1.ForeColor = Color.CornflowerBlue;
-            button1.Location = new Point(91, 618);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(73, 494);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(464, 3);
+            button1.Size = new Size(371, 2);
             button1.TabIndex = 47;
             button1.Text = "C";
             button1.UseVisualStyleBackColor = false;
@@ -84,12 +87,12 @@
             // 
             textBox1.BackColor = Color.SkyBlue;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.MidnightBlue;
-            textBox1.Location = new Point(109, 550);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
+            textBox1.Location = new Point(87, 440);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(391, 64);
+            textBox1.Size = new Size(313, 23);
             textBox1.TabIndex = 46;
             textBox1.Text = "Contraseña";
             // 
@@ -98,10 +101,10 @@
             btnnousar.BackColor = Color.MidnightBlue;
             btnnousar.Enabled = false;
             btnnousar.ForeColor = Color.CornflowerBlue;
-            btnnousar.Location = new Point(91, 508);
-            btnnousar.Margin = new Padding(4, 5, 4, 5);
+            btnnousar.Location = new Point(73, 406);
+            btnnousar.Margin = new Padding(3, 4, 3, 4);
             btnnousar.Name = "btnnousar";
-            btnnousar.Size = new Size(464, 3);
+            btnnousar.Size = new Size(371, 2);
             btnnousar.TabIndex = 45;
             btnnousar.UseVisualStyleBackColor = false;
             // 
@@ -109,12 +112,12 @@
             // 
             BtnEntrarUsuario.BackColor = Color.SkyBlue;
             BtnEntrarUsuario.FlatStyle = FlatStyle.Flat;
-            BtnEntrarUsuario.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnEntrarUsuario.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnEntrarUsuario.ForeColor = Color.MidnightBlue;
-            BtnEntrarUsuario.Location = new Point(189, 700);
-            BtnEntrarUsuario.Margin = new Padding(4, 5, 4, 5);
+            BtnEntrarUsuario.Location = new Point(151, 560);
+            BtnEntrarUsuario.Margin = new Padding(3, 4, 3, 4);
             BtnEntrarUsuario.Name = "BtnEntrarUsuario";
-            BtnEntrarUsuario.Size = new Size(263, 73);
+            BtnEntrarUsuario.Size = new Size(210, 58);
             BtnEntrarUsuario.TabIndex = 4;
             BtnEntrarUsuario.Text = "Iniciar";
             BtnEntrarUsuario.UseVisualStyleBackColor = false;
@@ -123,12 +126,12 @@
             // 
             txtUsuario.BackColor = Color.SkyBlue;
             txtUsuario.BorderStyle = BorderStyle.None;
-            txtUsuario.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.ForeColor = Color.MidnightBlue;
-            txtUsuario.Location = new Point(109, 440);
-            txtUsuario.Margin = new Padding(4, 5, 4, 5);
+            txtUsuario.Location = new Point(87, 352);
+            txtUsuario.Margin = new Padding(3, 4, 3, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(391, 64);
+            txtUsuario.Size = new Size(313, 23);
             txtUsuario.TabIndex = 2;
             txtUsuario.Text = "Usuario";
             // 
@@ -139,19 +142,19 @@
             iconUsuario.IconChar = FontAwesome.Sharp.IconChar.UserLarge;
             iconUsuario.IconColor = Color.MidnightBlue;
             iconUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconUsuario.IconSize = 263;
-            iconUsuario.Location = new Point(210, 25);
-            iconUsuario.Margin = new Padding(4, 5, 4, 5);
+            iconUsuario.IconSize = 210;
+            iconUsuario.Location = new Point(168, 20);
+            iconUsuario.Margin = new Padding(3, 4, 3, 4);
             iconUsuario.Name = "iconUsuario";
-            iconUsuario.Size = new Size(263, 353);
+            iconUsuario.Size = new Size(210, 282);
             iconUsuario.TabIndex = 1;
             iconUsuario.TabStop = false;
             // 
             // panelIniciar
             // 
-            panelIniciar.Anchor = AnchorStyles.None;
             panelIniciar.BackColor = Color.White;
             panelIniciar.BackgroundImageLayout = ImageLayout.None;
+            panelIniciar.Controls.Add(btnLogo);
             panelIniciar.Controls.Add(iconUser);
             panelIniciar.Controls.Add(btn2nousar);
             panelIniciar.Controls.Add(linkLabel1);
@@ -159,10 +162,11 @@
             panelIniciar.Controls.Add(txtContraseña);
             panelIniciar.Controls.Add(textIngresarUsuario);
             panelIniciar.Controls.Add(btnIngresar);
-            panelIniciar.Location = new Point(390, 83);
-            panelIniciar.Margin = new Padding(4, 5, 4, 5);
+            panelIniciar.Dock = DockStyle.Fill;
+            panelIniciar.Location = new Point(0, 0);
+            panelIniciar.Margin = new Padding(3, 4, 3, 4);
             panelIniciar.Name = "panelIniciar";
-            panelIniciar.Size = new Size(607, 1012);
+            panelIniciar.Size = new Size(460, 339);
             panelIniciar.TabIndex = 11;
             // 
             // iconUser
@@ -172,11 +176,11 @@
             iconUser.IconChar = FontAwesome.Sharp.IconChar.UserLarge;
             iconUser.IconColor = Color.MidnightBlue;
             iconUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconUser.IconSize = 210;
-            iconUser.Location = new Point(224, 63);
-            iconUser.Margin = new Padding(4, 5, 4, 5);
+            iconUser.IconSize = 107;
+            iconUser.Location = new Point(188, 4);
+            iconUser.Margin = new Padding(3, 4, 3, 4);
             iconUser.Name = "iconUser";
-            iconUser.Size = new Size(210, 240);
+            iconUser.Size = new Size(114, 107);
             iconUser.TabIndex = 12;
             iconUser.TabStop = false;
             // 
@@ -184,10 +188,10 @@
             // 
             btn2nousar.BackColor = Color.MidnightBlue;
             btn2nousar.Enabled = false;
-            btn2nousar.Location = new Point(86, 598);
-            btn2nousar.Margin = new Padding(4, 5, 4, 5);
+            btn2nousar.Location = new Point(69, 221);
+            btn2nousar.Margin = new Padding(3, 4, 3, 4);
             btn2nousar.Name = "btn2nousar";
-            btn2nousar.Size = new Size(464, 3);
+            btn2nousar.Size = new Size(371, 10);
             btn2nousar.TabIndex = 11;
             btn2nousar.UseVisualStyleBackColor = false;
             // 
@@ -198,10 +202,9 @@
             linkLabel1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linkLabel1.ForeColor = SystemColors.ControlText;
             linkLabel1.LinkColor = Color.MidnightBlue;
-            linkLabel1.Location = new Point(200, 853);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
+            linkLabel1.Location = new Point(153, 304);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(244, 25);
+            linkLabel1.Size = new Size(207, 20);
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "¿Olvidaste la Contraseña?";
@@ -210,10 +213,10 @@
             // 
             no.BackColor = Color.MidnightBlue;
             no.Enabled = false;
-            no.Location = new Point(86, 463);
-            no.Margin = new Padding(4, 5, 4, 5);
+            no.Location = new Point(69, 172);
+            no.Margin = new Padding(3, 4, 3, 4);
             no.Name = "no";
-            no.Size = new Size(464, 3);
+            no.Size = new Size(371, 10);
             no.TabIndex = 8;
             no.Text = "button1";
             no.UseVisualStyleBackColor = false;
@@ -222,12 +225,12 @@
             // 
             txtContraseña.BackColor = Color.White;
             txtContraseña.BorderStyle = BorderStyle.None;
-            txtContraseña.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContraseña.ForeColor = Color.MidnightBlue;
-            txtContraseña.Location = new Point(86, 530);
-            txtContraseña.Margin = new Padding(4, 5, 4, 5);
+            txtContraseña.Location = new Point(153, 190);
+            txtContraseña.Margin = new Padding(3, 4, 3, 4);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(496, 64);
+            txtContraseña.Size = new Size(269, 23);
             txtContraseña.TabIndex = 2;
             txtContraseña.Text = "Contraseña";
             txtContraseña.Enter += txtContraseña_Enter;
@@ -237,12 +240,12 @@
             // 
             textIngresarUsuario.BackColor = Color.White;
             textIngresarUsuario.BorderStyle = BorderStyle.None;
-            textIngresarUsuario.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textIngresarUsuario.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textIngresarUsuario.ForeColor = Color.MidnightBlue;
-            textIngresarUsuario.Location = new Point(86, 395);
-            textIngresarUsuario.Margin = new Padding(4, 5, 4, 5);
+            textIngresarUsuario.Location = new Point(153, 141);
+            textIngresarUsuario.Margin = new Padding(3, 4, 3, 4);
             textIngresarUsuario.Name = "textIngresarUsuario";
-            textIngresarUsuario.Size = new Size(464, 64);
+            textIngresarUsuario.Size = new Size(287, 23);
             textIngresarUsuario.TabIndex = 1;
             textIngresarUsuario.Text = "Usuario";
             textIngresarUsuario.Enter += textIngresarUsuario_Enter;
@@ -253,24 +256,35 @@
             btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnIngresar.ForeColor = Color.MidnightBlue;
-            btnIngresar.Location = new Point(200, 727);
-            btnIngresar.Margin = new Padding(4, 5, 4, 5);
+            btnIngresar.Location = new Point(166, 246);
+            btnIngresar.Margin = new Padding(3, 4, 3, 4);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(210, 67);
+            btnIngresar.Size = new Size(168, 54);
             btnIngresar.TabIndex = 3;
             btnIngresar.TabStop = false;
             btnIngresar.Text = "Iniciar Sesion";
             btnIngresar.UseVisualStyleBackColor = true;
             // 
+            // btnLogo
+            // 
+            btnLogo.Image = (Image)resources.GetObject("btnLogo.Image");
+            btnLogo.Location = new Point(3, 0);
+            btnLogo.Margin = new Padding(3, 4, 3, 4);
+            btnLogo.Name = "btnLogo";
+            btnLogo.Size = new Size(85, 92);
+            btnLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnLogo.TabIndex = 13;
+            btnLogo.TabStop = false;
+            // 
             // FrmIniciarSesion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1413, 1270);
+            ClientSize = new Size(460, 339);
             Controls.Add(panelIniciar);
             Controls.Add(panel2);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmIniciarSesion";
             Text = "FrmIniciarSesion";
             Load += FrmIniciarSesion_Load;
@@ -280,6 +294,7 @@
             panelIniciar.ResumeLayout(false);
             panelIniciar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -300,5 +315,6 @@
         private Button btnIngresar;
         private Button btn2nousar;
         private FontAwesome.Sharp.IconPictureBox iconUser;
+        private PictureBox btnLogo;
     }
 }
