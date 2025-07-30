@@ -9,7 +9,7 @@ namespace CasaRobot.UI.Models
     public class Equipo
     {
         public int EquipoID { get; set; }
-        public int ClienteID { get; set; }
+        public int? ClienteID { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string NumeroSerie { get; set; }

@@ -18,7 +18,7 @@ namespace CasaRobot.UI.Services
 
     public Task<List<Equipo>> ObtenerEquiposAsync()
     {
-        return _apiService.GetAsync<Equipo>("api/EquiposControlador/GetEquipos");
+        return _apiService.GetAsync<Equipo>("api/EquiposControlador/ListarEquipos");
     }
 
     public Task<bool> CrearEquipoAsync(Equipo equipo)
